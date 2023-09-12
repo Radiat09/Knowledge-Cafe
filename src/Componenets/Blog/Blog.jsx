@@ -10,6 +10,7 @@ const Blog = ({ blog, handleAddToBookmark, handleMarkAsRead }) => {
     author_img,
     posted_date,
     hashtags,
+    id,
   } = blog;
   return (
     <div className="mb-20 space-y-4">
@@ -44,7 +45,7 @@ const Blog = ({ blog, handleAddToBookmark, handleMarkAsRead }) => {
         ))}
       </p>
       <button
-        onClick={() => handleMarkAsRead(reading_time)}
+        onClick={() => handleMarkAsRead(reading_time, id)}
         className="text-purple-800 font-bold underline"
       >
         Mark As Read
